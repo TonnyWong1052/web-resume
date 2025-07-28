@@ -1,0 +1,493 @@
+.li1-box{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.li1-box-item{
+  flex: 0 0 48%;
+  position: relative;
+  min-height: 250px;
+  /* background-color: antiquewhite; */
+  margin-bottom: 40px;
+}
+
+.boxitem-line{
+  padding: 30px 40px;
+}
+.boxitem-line h6{
+}
+.boxitem-line h6>span{
+  float: right;
+}
+.boxitem-line .propress{
+  height: 8px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.propress>span{
+    width: 0%;
+    transition: width 1s ease-in-out;
+    background-color: var(--mainColor);
+    display: inline-block;
+    height: 100%;
+    vertical-align: super;
+    border-radius: 10px;
+}
+
+
+h6{
+  margin: 10px 0px;
+}
+
+.li2-box{
+  /* min-height: 200px; */
+  padding: 30px 50px;
+  box-sizing: border-box;
+}
+.li2-box ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+.li2-box li{
+  flex: 0 0 33%;
+  text-align: left;
+  height: 30px;
+  line-height:  30px;
+  position: relative;
+}
+.li2-box li:after{
+  position: absolute;
+    content: '';
+    left: -15px;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    /* background-color: aqua; */
+    border-radius: 50%;
+    border: 3px solid var(--mainColor);
+}
+.li3-box{
+  display: flex;
+  flex-wrap: wrap;
+}
+.li3-box>div{
+  flex: 0 0 50%;
+  position: relative;
+  /* margin-bottom: 10px; */
+}
+.li3-box>div::after{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 100%;
+  background-color: var(--headerCOlor);
+}
+
+.li3-box .carcontent{
+  min-height: 150px;
+  margin: 0 20px 20px;
+  padding: 30px;
+  box-sizing: content-box;
+  /* width: 80%; */
+  /* background-color: aqua; */
+} 
+.li3-box .li3box-pro{
+  position: relative;
+}
+.li3box-pro:hover .carprogress{
+  opacity: 1;
+}
+.li3-box .carprogress{
+  transition: all .2s ease-in-out;
+  position: absolute;
+  right: -6px;
+  z-index: 1;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  background-color: var(--headerCOlor);
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 5px solid var(--mainColor);
+  opacity: .5;
+}
+
+/* 自我介紹區塊樣式 */
+.li-intro {
+  margin-bottom: 40px;
+}
+
+.intro-box {
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.intro-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--headerFont);
+  margin: 0;
+  text-align: justify;
+}
+
+.intro-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.detail-item {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 4px solid var(--mainColor);
+}
+
+.detail-item h4 {
+  color: var(--mainColor);
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.detail-item p {
+  margin: 0;
+  color: var(--headerFont);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 響應式設計 */
+@media screen and (max-width: 768px) {
+  .intro-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .intro-box {
+    padding: 25px;
+  }
+  
+  .detail-item {
+    padding: 15px;
+  }
+}
+
+
+ /* 手机*/
+ @media screen and (max-width: 550px) {
+  .content-li{
+    display: block;
+  }
+  .li1-box{
+    display: block;
+  }
+  .li2-box ul{
+    display: block;
+  }
+  .li3-box{
+    display: block;
+  }
+  .li2-box li{
+    width: 100%;
+  }
+}
+
+/* Terminal Card Style for Resume Right Side */
+.terminal-card {
+  background: #181c1b;
+  border-radius: 10px;
+  box-shadow: 0 4px 32px #000a, 0 1.5px 0 #00ff90 inset;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', 'monospace';
+  color: #00ff90;
+  margin-bottom: 40px;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid #222;
+  max-width: 100%;
+}
+.terminal-header {
+  background: #232826;
+  padding: 0.7em 1.2em;
+  display: flex;
+  align-items: center;
+  border-bottom: 1.5px solid #00ff90;
+}
+.term-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+.term-dot.red { background: #ff5f56; }
+.term-dot.yellow { background: #ffbd2e; }
+.term-dot.green { background: #27c93f; }
+.term-title {
+  margin-left: 18px;
+  font-size: 1.1em;
+  color: #00ff90;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.terminal-body {
+  padding: 2em 2.2em 1.5em 2.2em;
+  background: #181c1b;
+}
+.term-line {
+  margin: 0 0 0.5em 0;
+  font-size: 1.08em;
+  color: #00ff90;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+}
+.term-prompt {
+  color: #00ff90;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+.term-cmd {
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.term-list {
+  list-style: none;
+  padding: 0 0 0 1.5em;
+  margin: 0 0 1.2em 0;
+}
+.term-list li {
+  color: #b6ffce;
+  font-size: 1em;
+  margin-bottom: 0.3em;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+}
+.term-bullet {
+  color: #00ff90;
+  margin-right: 0.7em;
+}
+.term-contact {
+  color: #fff;
+  font-size: 1em;
+  margin-top: 0.5em;
+  font-family: inherit;
+}
+.term-contact a {
+  color: #00ff90;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.term-contact a:hover {
+  color: #fff;
+  background: #00ff90;
+  text-shadow: 0 0 8px #00ff90;
+}
+
+@media (max-width: 900px) {
+  .terminal-body {
+    padding: 1.2em 0.7em 1em 0.7em;
+  }
+}
+
+/* SPACE Button Star Effect */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  overflow: hidden;
+  height: 3rem;
+  background-size: 300% 300%;
+  cursor: pointer;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+  background-image: linear-gradient(#212121, #212121),
+    linear-gradient(
+      137.48deg,
+      #ffdb3b 10%,
+      #fe53bb 45%,
+      #8f51ea 67%,
+      #0044ff 87%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  position: relative;
+}
+
+#container-stars {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+}
+
+strong {
+  z-index: 2;
+  font-family: "Avalors Personal Use", monospace, sans-serif;
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  text-shadow: 0 0 4px white;
+}
+
+#glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+
+.circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 4s infinite;
+  z-index: -1;
+}
+
+.circle:nth-of-type(1) {
+  background: rgba(254, 83, 186, 0.636);
+}
+
+.circle:nth-of-type(2) {
+  background: rgba(142, 81, 234, 0.704);
+}
+
+.btn:hover #container-stars {
+  z-index: 1;
+  background-color: #212121;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn:active {
+  border: double 4px #fe53bb;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: none;
+}
+
+.btn:active .circle {
+  background: #fe53bb;
+}
+
+#stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+
+#stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 90s linear infinite;
+}
+
+#stars::after {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+
+#stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 60s linear infinite;
+}
+
+#stars::before {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-135rem);
+  }
+}
+
+@keyframes animStarRotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse_3011 {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.buttom-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}

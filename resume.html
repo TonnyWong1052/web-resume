@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <script src="./js/jq.js"></script>
+  <link rel="stylesheet" href="./css/resume.css">
+</head>
+
+<body>
+  <canvas class="canvas-wrap" id="triangle-lost-in-space" resize="true"></canvas>
+  <!-- 主要页面 -->
+  <div class="box">
+
+    <!-- 顶部栏 -->
+    <div class="header borderafter">
+      <!-- 返回按钮 -->
+      <div class="col">
+        <span>Personal Resume</span>
+        <!-- 右边操作栏 -->
+        <div class="header-right">
+          <!-- 按钮 -->
+          <div class="min_menu-wrap" id="minmenu">
+            <span class="min_menu"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 顶部导航 -->
+    <div class="navigation">
+      <div class="nav-titleBox co zz">
+        <!-- 占位符 -->
+        <div class="co-left"></div>
+
+        <!-- 标题 -->
+        <div class="co-right">
+          <h1>
+            Exploring the different possibilities that may arise.
+          </h1>
+          <a class="buttom navbtn" href="#next-one">About Me
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 主要修改部分 -->
+    <div class="content zz">
+      <!-- 占位符 -->
+      <div class="co-left">
+        <!-- 简历吸盘 -->
+        <div class="me-card carbox borderbefore" id="mycard">
+          <div class="mecar-title">
+            <div class="me-image">
+              <img src="./img/IT_man.png" alt="">
+            </div>
+            <h2>Tom</h2>
+            <h3>LEUNG Chu Shing</h3>
+            <p class="me-hover">
+              <span>Computer Science Student</span>
+            </p>
+          </div>
+          <div class="borderbotm"></div>
+          <div class="mecar-bottm">
+            <div>
+              <span class="mecarbottm-key">University</span>
+              <span class="mecarbottm-value">PolyU</span>
+            </div>
+            <div>
+              <span class="mecarbottm-key">Region/Country</span>
+              <span class="mecarbottm-value">Hong Kong, China</span>
+            </div>
+
+          </div>
+          <div class="borderbotm"></div>
+          <div class="buttom-box ">
+            <button type="button" class="btn" onclick="window.location.href='mailto:leungchushing1@gmail.com'">
+              <strong>Contact</strong>
+              <div id="container-stars">
+                <div id="stars"></div>
+              </div>
+              <div id="glow">
+                <div class="circle"></div>
+                <div class="circle"></div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- 右边 -->
+      <div class="co-right" id="next-one">
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <span class="term-dot red"></span>
+            <span class="term-dot yellow"></span>
+            <span class="term-dot green"></span>
+            <span class="term-title">tom@portfolio:~$</span>
+          </div>
+          <div class="terminal-body">
+            <pre class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">cat skills.txt</span></pre>
+            <ul class="term-list">
+              <li><span class="term-bullet">-</span> Docker</li>
+              <li><span class="term-bullet">-</span> Amazon Web Services (AWS)</li>
+              <li><span class="term-bullet">-</span> Microsoft Azure</li>
+              <li><span class="term-bullet">-</span> CCNA</li>
+              <li><span class="term-bullet">-</span> React.js</li>
+              <li><span class="term-bullet">-</span> Django</li>
+              <li><span class="term-bullet">-</span> Node.js</li>
+              <li><span class="term-bullet">-</span> PHP</li>
+              <li><span class="term-bullet">-</span> CSS</li>
+              <li><span class="term-bullet">-</span> JavaScript</li>
+              <li><span class="term-bullet">-</span> TypeScript</li>
+              <li><span class="term-bullet">-</span> Content Management Systems (CMS)</li>
+            </ul>
+            <pre class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">cat experience.txt</span></pre>
+            <ul class="term-list">
+              <li><span class="term-bullet">-</span> <b>Programmer Intern @ HKAE</b> <br>Jul 2024 - Aug 2024 · 2 months<br>Hong Kong SAR · Hybrid<br>Involved in using <b>React</b> for the frontend and <b>Django</b> for the backend to build applications such as LLM-based web.<br>Skills: Django, React.js</li>
+              <li><span class="term-bullet">-</span> <b>IT Solution Assistant @ TECHTURE LIMITED</b> <br>Jul 2022 - Aug 2022 · 2 months<br>Hong Kong SAR · On-site<br>Worked with <b>WordPress/Joomla</b> as the CMS, using <b>PHP</b> and <b>CSS</b> for customization, to build responsive web applications tailored to client needs.<br>Skills: PHP, CMS, CSS</li>
+            </ul>
+            <pre class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">cat education.txt</span></pre>
+            <ul class="term-list">
+              <li><span class="term-bullet">-</span> <b>The Hong Kong Polytechnic University</b> <br>Bachelor's degree, BSc in Computing<br>Sep 2023 - Jun 2025</li>
+              <li><span class="term-bullet">-</span> <b>Hong Kong Institute of Information Technology (HKIIT)</b> <br>Higher Diploma, Software Engineering<br>Sep 2021 - Jun 2023</li>
+            </ul>
+            <pre class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">cat certification.txt</span></pre>
+            <ul class="term-list">
+              <li><span class="term-bullet">-</span> AWS Certified Solutions Architect – Associate (SAA-C03)</li>
+              <li><span class="term-bullet">-</span> AWS Certified Developer – Associate (DVA-C02)</li>
+            </ul>
+            <pre class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">echo "Contact: leungchushing1@gmail.com"</span></pre>
+            <div class="term-contact">Contact: <a href="mailto:leungchushing1@gmail.com">leungchushing1@gmail.com</a></div>
+            </br>
+            <pre class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">echo "Phone: +852 54297749"</span></pre>
+            <div class="term-contact">Phone: <a href="tel:+85254297749">+852 54297749</a></div>
+                </div>
+              </div>
+
+          <div class="carbox copybottm">
+            ©2025 LEUNG Chu Shing
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+</body>
+
+<script src="./js/base.js"></script>
+<script type="text/javascript" src="./js/paper-full.min.js"></script>
+<script type="text/javascript" src="./js/canvas.js"></script>
+<script>
+  $(document).ready(function () {
+    let spanList = $('.li1-box-item .boxitem-line .jindu');
+    let jinduList = ['95%', '80%', '65%', '95%', '85%', '75%', '75%', '95%', '55%', '65%', '95%', '35%']
+
+    for (let i = 0; i <= spanList.length; i++) {
+      $(spanList[i]).css('width', jinduList[i])
+    }
+  })
+</script>
+
+</html>
